@@ -85,6 +85,7 @@ html {
 
 body {
   min-width: 1440px;
+  overflow-x: hidden;
   margin: 0;
   color: var(--ink);
   background: var(--paper);
@@ -95,7 +96,7 @@ body {
   position: relative;
   width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   background: var(--paper);
 }
 
@@ -114,13 +115,21 @@ body {
   height: 131px;
   align-items: center;
   justify-content: space-between;
-  padding: 41px 124px 41px 54px;
+  padding: 41px 116px 41px 48px;
   background: var(--paper);
 }
 
 .home-nav {
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 52px;
+  padding-left: 52px;
+}
+
+.page-content {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 1440px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .site-logo {
@@ -200,10 +209,10 @@ figure img {
 
 .site-footer {
   position: absolute;
-  left: 0;
-  width: 1440px;
+  left: calc((1440px - 100vw) / 2);
+  width: 100vw;
   height: 401px;
-  padding: 51px 54px 0;
+  padding: 51px 0 0 calc((100vw - 1440px) / 2 + 48px);
   color: var(--paper);
   background: var(--ink);
 }
@@ -262,7 +271,7 @@ figure img {
   position: absolute;
   z-index: 2;
   top: 131px;
-  left: 67px;
+  left: 59px;
   width: 1093px;
   font-family: var(--display);
   font-size: 64px;
@@ -284,7 +293,7 @@ figure img {
 .home-tagline {
   position: absolute;
   top: 531px;
-  left: 60px;
+  left: 48px;
   font-family: var(--mono);
   font-size: 64px;
   font-weight: 500;
@@ -314,7 +323,7 @@ figure img {
 .home-next-image {
   position: absolute;
   top: 1084px;
-  left: 67px;
+  left: 59px;
   width: 426px;
   height: 439px;
   border: 2px solid var(--ink);
@@ -323,10 +332,10 @@ figure img {
 .home-next-panel {
   position: absolute;
   top: 1084px;
-  left: 493px;
-  width: 887px;
+  left: 485px;
+  width: 895px;
   height: 443px;
-  padding: 44px 0 0 54px;
+  padding: 44px 0 0 48px;
   border: 2px solid var(--ink);
   color: var(--paper);
   background: #090909;
@@ -349,8 +358,8 @@ figure img {
 .home-activities-image {
   position: absolute;
   top: 1524px;
-  left: 67px;
-  width: 1313px;
+  left: 59px;
+  width: 1321px;
   height: 372px;
   border: 2px solid var(--ink);
 }
@@ -378,7 +387,7 @@ figure img {
 .home-join {
   position: absolute;
   top: 1942px;
-  left: 60px;
+  left: 48px;
   display: flex;
   width: 1337px;
   align-items: flex-end;
@@ -412,7 +421,7 @@ figure img {
 .event-heading {
   position: absolute;
   top: 131px;
-  left: 60px;
+  left: 48px;
   width: 941px;
   line-height: normal;
 }
@@ -486,7 +495,7 @@ figure img {
 .event-description {
   position: absolute;
   top: 1071px;
-  left: 60px;
+  left: 48px;
   display: flex;
   width: 1311px;
   flex-direction: column;
@@ -569,7 +578,7 @@ figure img {
 }
 
 .event-quote-images figure:first-child {
-  top: 10px;
+  top: 0;
   left: 10px;
   width: 933px;
 }
@@ -583,7 +592,7 @@ figure img {
 .event-artists {
   position: absolute;
   top: 3271px;
-  left: 60px;
+  left: 48px;
   width: 1320px;
 }
 
@@ -625,7 +634,7 @@ figure img {
 .event-practical {
   position: absolute;
   top: 3877px;
-  left: 60px;
+  left: 48px;
   width: 1320px;
   height: 540px;
 }
@@ -676,7 +685,7 @@ figure img {
 .about-kicker {
   position: absolute;
   top: 217px;
-  left: 54px;
+  left: 48px;
   font-family: var(--mono);
   font-size: 48px;
   font-weight: 600;
@@ -686,7 +695,7 @@ figure img {
 .about-quote {
   position: absolute;
   top: 304px;
-  left: 55px;
+  left: 48px;
   font-family: var(--display);
   font-size: 40px;
   font-weight: 400;
@@ -697,7 +706,7 @@ figure img {
 .about-name {
   position: absolute;
   top: 435px;
-  left: 54px;
+  left: 48px;
   width: 871px;
   font-family: var(--mono);
   font-size: 40px;
@@ -817,7 +826,7 @@ figure img {
   white-space: nowrap;
 }
 
-.about-manifesto p:nth-child(1) { top: 1998px; left: 54px; }
+.about-manifesto p:nth-child(1) { top: 1998px; left: 48px; }
 .about-manifesto p:nth-child(2) { top: 2126px; left: 338px; }
 .about-manifesto p:nth-child(2) span { color: var(--yellow); }
 .about-manifesto p:nth-child(3) { top: 2254px; left: 145px; }
@@ -840,8 +849,8 @@ figure img {
 .about-work {
   position: absolute;
   top: 3566px;
-  left: 55px;
-  width: 1323px;
+  left: 48px;
+  width: 1332px;
 }
 
 .about-work h2 {
@@ -886,7 +895,7 @@ figure img {
 .member-title {
   position: absolute;
   top: 209px;
-  left: 54px;
+  left: 48px;
   font-family: var(--display);
   font-size: 48px;
   font-weight: 400;
@@ -896,7 +905,7 @@ figure img {
 .member-statement {
   position: absolute;
   top: 312px;
-  left: 61px;
+  left: 53px;
   font-family: var(--mono);
   font-size: 48px;
   font-weight: 600;
@@ -907,7 +916,7 @@ figure img {
 .member-values {
   position: absolute;
   top: 543px;
-  left: 61px;
+  left: 53px;
   font-family: var(--mono);
   font-size: 48px;
   font-weight: 600;
@@ -923,8 +932,8 @@ figure img {
   border: 9px solid var(--ink);
 }
 
-.member-benefits { left: 29px; }
-.member-form-panel { left: 725px; }
+.member-benefits { left: 21px; }
+.member-form-panel { left: 717px; }
 
 .member-benefits h2,
 .member-form-panel h2 {
